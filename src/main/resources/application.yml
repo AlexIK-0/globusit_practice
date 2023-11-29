@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: project
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/unn"
+    username: postgres
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  hikari:
+    maximum-pool-size: 25
+
+app:
+  bd_url: "jdbc:postgresql://localhost:5432/unn"
+  username: postgres
+  password: 1234
+
+kafka:
+  bootstrap-servers: localhost:9092
+  request-topic: requests_kafka1
+  result-topic: results_kafka2
+  status-topic: status_topic
+  group-id: myGroupId
+
+management:
+  endpoints.web.exposure.include: 'prometheus, health'
+  metrics:
+    export:
+      prometheus:
+        enabled: true
+      distribution:
+        percentiles:
+          "[http.server.requests]": true
+

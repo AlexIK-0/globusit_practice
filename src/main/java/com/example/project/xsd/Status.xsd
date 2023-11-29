@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:tns="http://example.com/requests"
+            targetNamespace="http://example.com/status"
+            elementFormDefault="qualified">
+
+    <xsd:element name="Status">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="code" type="xsd:int"/>
+                <xsd:element name="status" type="xsd:string"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>
